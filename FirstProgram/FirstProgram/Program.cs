@@ -26,6 +26,13 @@ namespace FirstProgram
             Console.WriteLine("Hello World");
             Console.WriteLine(reverse("Usher us into the dreaming."));
 
+            Circle circle = new FirstProgram.Circle(3);
+            Console.WriteLine(circle.getArea());
+            Console.WriteLine(Circle.formatNumber(circle.getArea()));
+            Console.WriteLine(circle.getCircumference());
+            Console.WriteLine(Circle.formatNumber(circle.getCircumference()));
+            Console.WriteLine(Circle.getObjectCount());
+
             Console.ReadLine();
 
         }

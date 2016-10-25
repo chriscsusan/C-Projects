@@ -12,7 +12,8 @@ namespace Roshambo
         {
         }
 
-        new Rosh generateRoshambo()
+
+        public override Rosh generateRoshambo()
         {
             return Rosh.Rock;
         }
