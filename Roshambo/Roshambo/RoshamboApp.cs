@@ -36,53 +36,53 @@ namespace RoshamboApp
 			
 			humanResult = humanPlayer.generateRoshambo();
 			opponentResult = opponent.generateRoshambo();
-            Console.WriteLine(humanPlayer.name+ " threw: " + humanResult);
+            Console.WriteLine(humanPlayer.getName() + " threw: " + humanResult);
             Console.WriteLine(opponent.getName() + " threw: " + opponentResult);
 
 			switch (humanResult) {
 			case Rosh.Rock:
 				if (opponentResult == Rosh.Paper) {
                             Console.WriteLine("Dang, you lost.");
-					humanPlayer.losses++;
+					humanPlayer.Losses++;
 				} else if (opponentResult == Rosh.Rock) {
                             Console.WriteLine("It's a tie!  Nobody wins.");
-					humanPlayer.ties++;
+					humanPlayer.Ties++;
 				} else {
                             Console.WriteLine("You won!  Woo!");
-					humanPlayer.wins++;
+					humanPlayer.Wins++;
 				}
 				break;
 			case Rosh.Paper:
 				if (opponentResult == Rosh.Scissors) {
 					Console.WriteLine("Uh oh, you lost.");
-					humanPlayer.losses++;
+					humanPlayer.Losses++;
 				} else if (opponentResult == Rosh.Paper) {
                             Console.WriteLine("It's a tie!  Nobody wins.");
-					humanPlayer.ties++;
+					humanPlayer.Ties++;
 				} else {
                             Console.WriteLine("You won!  Woo!");
-					humanPlayer.wins++;
+					humanPlayer.Wins++;
 				}
 				break;
 			case Rosh.Scissors:
 				if (opponentResult == Rosh.Rock) {
                             Console.WriteLine("You lost.  Better luck next time.");
-					humanPlayer.losses++;
+					humanPlayer.Losses++;
 				} else if (opponentResult == Rosh.Scissors) {
                             Console.WriteLine("It's a tie!  Nobody wins.");
-					humanPlayer.ties++;
+					humanPlayer.Ties++;
 				} else {
                             Console.WriteLine("You won!  Woo!");
-					humanPlayer.wins++;
+					humanPlayer.Wins++;
 				}
 				break;
 			default:
                 break;
 			}
                 Console.WriteLine(
-					"\nWins: " + humanPlayer.wins + "\nLosses: " + humanPlayer.losses + "\nTies: " + humanPlayer.ties
-							+ "\nTotal games: " + (humanPlayer.wins + humanPlayer.losses + humanPlayer.ties));
-			sc.nextLine();
+					"\nWins: " + humanPlayer.Wins + "\nLosses: " + humanPlayer.Losses + "\nTies: " + humanPlayer.Ties
+							+ "\nTotal games: " + (humanPlayer.Wins + humanPlayer.Losses + humanPlayer.Ties));
+			Console.ReadLine();
                 Console.WriteLine("\nWould you like to play again? (y/n)");
 			playAgain = Console.ReadLine();
 		}
@@ -90,4 +90,4 @@ namespace RoshamboApp
 	}
         }
     }
-}
+

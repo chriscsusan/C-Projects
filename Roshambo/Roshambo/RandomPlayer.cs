@@ -12,7 +12,7 @@ namespace Roshambo
         {
         }
 
-        public new Rosh generateRoshambo()
+        public override Rosh generateRoshambo()
         {
             Rosh choice = Rosh.Paper;
             Random rand = new Random();

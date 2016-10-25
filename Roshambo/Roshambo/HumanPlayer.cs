@@ -9,14 +9,22 @@ namespace Roshambo
     class HumanPlayer : Player
     {
         private Rosh result;
-        private string name { get; set; }
+        private string name;
         private string temp;
 
         public HumanPlayer(string name) : base(name)
         {
         }
 
-        new public Rosh generateRoshambo()
+        public void setName(string name)
+        {
+            this.name = name;
+        }
+        public string getName()
+        {
+            return this.name;
+        }
+        public override Rosh generateRoshambo()
         {
             while (true)
             {
